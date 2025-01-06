@@ -1,0 +1,45 @@
+name: Bug report
+description: Something is not working
+title: "Description of the issue"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If applicable, add screenshots to help explain your problem.
+      placeholder: |
+        trains.sh app is not working as expected when I try to ...
+
+        [Screenshot if possible, censor personal data!]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: App / Browser console logs
+      description: Logs / Errors from the app or web browser console related to your issue, if needed
+      render: bash
+  - type: input
+    id: platform_info
+    attributes:
+      label: Platform
+      description: Which platform you are using, if relevant.
+      placeholder: e.g. Android
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: Which app version you are using, if relevant.
+      placeholder: e.g. v1.0
